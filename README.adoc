@@ -1,3 +1,5 @@
 As of now, This is a dummy spring boot app, which sends data via sockets in a stream. Next step is to connect it with our Product/Agent/Sensor to get data.
 
 This uses Spring websockets
+
+Please use Complete Folder to load spring boot project
