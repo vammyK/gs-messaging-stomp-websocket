@@ -1,7 +1,8 @@
-package hello;
+package org.siemens.mindverse.controllers;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+import org.siemens.mindverse.model.SensorStatistics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
