@@ -46,7 +46,7 @@ public class ImageMatchingService {
 		}
 	}
 	
-	public Long searchImage(String fullFilePath) throws IOException, JSONException {
+	public String searchImage(String fullFilePath) throws IOException, JSONException {
 		String dem = "from elasticsearch import Elasticsearch\r\n"
 				+ "from image_match.elasticsearch_driver import SignatureES\r\n" + "import sys\r\n"
 				+ "es = Elasticsearch()\r\n" + "ses = SignatureES(es)\r\n"
@@ -77,11 +77,11 @@ public class ImageMatchingService {
 			Double distance= jsonObject.getDouble("dist");
 			if(distance<0.5) {
 				JSONObject mdata= new JSONObject(jsonObject.getString("metadata"));
-				return mdata.getLong("productId");
+				return mdata.getString("productId");
 			}
 			
 		}
-		return 0l;
+		return null;
 	}
 
 }
